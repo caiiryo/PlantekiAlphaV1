@@ -17,17 +17,17 @@ MDScreen:
                 root.manager.transition.direction = "right"
                 root.manager.current = "landing"
 
-    MDLabel:
+    Label:
         text: "Welcome!"
-        font_name: "SFDispHeavy"
+        font_name: "fonts/SFProDisplay-Heavy.ttf"
         font_size: "49sp"
-        pos_hint: {"center_x": .56,"center_y": .89}
+        pos_hint: {"center_x": .365,"center_y": .89}
         color: rgba(114,122,67,255)
-    MDLabel:
+    Label:
         text: "Sign in to continue"
-        font_name: "SFTextSB"
+        font_name: "fonts/SFProText-Semibold.ttf"
         font_size: "23sp"
-        pos_hint: {"center_x": .6,"center_y": .832}
+        pos_hint: {"center_x": .372,"center_y": .832}
         color: rgba(107, 107, 107, 255)
 
     MDFloatLayout:
@@ -35,7 +35,7 @@ MDScreen:
         pos_hint: {"center_x": .5, "center_y": .72}
         TextInput:
             hint_text: "Username"
-            font_name: "SFTextReg"
+            font_name: "fonts/SFProText-Regular.ttf"
             size_hint_y: .75
             pos_hint: {"center_x": .43, "center_y": .5}
             background_color: 1, 1, 1, 0
@@ -54,7 +54,7 @@ MDScreen:
         pos_hint: {"center_x": .5, "center_y": .62}
         TextInput:
             hint_text: "Password"
-            font_name: "SFTextReg"
+            font_name: "fonts/SFProText-Regular.ttf"
             size_hint_y: .75
             pos_hint: {"center_x": .43, "center_y": .5}
             background_color: 1, 1, 1, 0
@@ -76,7 +76,7 @@ MDScreen:
         pos_hint: {"center_x": .5, "center_y": .47}
         background_color: 0, 0, 0, 0
         color: rgba(114,122,67,255)
-        font_name: "SFTextBold"
+        font_name: "fonts/SFProText-Bold.ttf"
         font_size: "20sp"
         halign: "center"
         on_release:

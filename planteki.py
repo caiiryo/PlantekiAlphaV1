@@ -19,9 +19,6 @@ class Planteki(MDApp):
         return screen_manager
 
 if __name__ == "__main__":
-    LabelBase.register(name="SFDispHeavy", fn_regular="D:\Planteki\Fonts\SFProDisplay\SFProText-Heavy.ttf")
-    LabelBase.register(name="SFTextBold", fn_regular="D:\Planteki\Fonts\SFProDisplay\SFProText-Bold.ttf")
-    LabelBase.register(name="SFTextReg", fn_regular="D:\Planteki\Fonts\SFProDisplay\SFProText-Regular.ttf")
-    LabelBase.register(name="SFTextSB", fn_regular="D:\Planteki\Fonts\SFProDisplay\SFProText-Semibold.ttf")
+
 
     Planteki().run()
