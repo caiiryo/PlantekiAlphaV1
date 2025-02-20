@@ -5,11 +5,14 @@ MDScreen:
         md_bg_color: 1, 1, 1, 1
         size: root.width, root.height
 
-        Image:
-            source: "assets/profile-user.png"
+        MDIconButton:
+            icon: "assets/profile-user.png"
             size_hint: None, None
             size: 30, 30
             pos_hint: {"center_x": 0.1, "center_y": .96}
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "landing"
 
         # Weather Card
         MDCard:
@@ -47,8 +50,6 @@ MDScreen:
                     text_color: 0.447, 0.478, 0.263, 1
                     halign: "right"
                     valign: "center"
-
-        # Temperature Card (New Card)
         MDCard:
             size_hint_x: 0.8
             size_hint_y: None
