@@ -1,2 +1,110 @@
 MDScreen:
     name: "signup"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+
+    MDBoxLayout:
+        size_hint: None, None
+        size: dp(70), dp(70)  # Adjust this to your preferred size
+        pos_hint: {"center_x": 0.1, "center_y": .97}  # Adjust position
+
+        MDIconButton:
+            icon: "arrow-left"
+            theme_text_color: "Custom"
+            user_font_size: "100sp"
+            text_color: rgba(114,122,67,255)
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "landing"
+
+    Label:
+        text: "Greetings!"
+        font_name: "fonts/SFProDisplay-Heavy.ttf"
+        font_size: "49sp"
+        pos_hint: {"center_x": .365,"center_y": .89}
+        color: rgba(114,122,67,255)
+    Label:
+        text: "Create a new account"
+        font_name: "fonts/SFProText-Semibold.ttf"
+        font_size: "23sp"
+        pos_hint: {"center_x": .372,"center_y": .832}
+        color: rgba(107, 107, 107, 255)
+#username
+    MDFloatLayout:
+        size_hint: .7, .07
+        pos_hint: {"center_x": .5, "center_y": .72}
+        TextInput:
+            hint_text: "Username"
+            font_name: "fonts/SFProText-Regular.ttf"
+            size_hint_y: .75
+            pos_hint: {"center_x": .43, "center_y": .5}
+            background_color: 1, 1, 1, 0
+            foreground_color: rgba(0, 0, 59, 255)
+            cursor_color: rgba(0, 0, 59, 255)
+            font_size: "17sp"
+            cursor_width: "2sp"
+            multiline: False
+        MDFloatLayout:
+            pos_hint: {"center_x": .45, "center_y": .31}
+            size_hint_y: .03
+            md_bg_color:rgba(178, 178, 178, 255)
+#Emailaddress
+    MDFloatLayout:
+        size_hint: .7, .07
+        pos_hint: {"center_x": .5, "center_y": .62}
+        TextInput:
+            hint_text: "Email Address"
+            font_name: "fonts/SFProText-Regular.ttf"
+            size_hint_y: .75
+            pos_hint: {"center_x": .43, "center_y": .5}
+            background_color: 1, 1, 1, 0
+            foreground_color: rgba(0, 0, 59, 255)
+            cursor_color: rgba(0, 0, 59, 255)
+            font_size: "17sp"
+            cursor_width: "2sp"
+            multiline: False
+        MDFloatLayout:
+            pos_hint: {"center_x": .45, "center_y": .31}
+            size_hint_y: .03
+            md_bg_color:rgba(178, 178, 178, 255)
+
+    MDFloatLayout:
+        size_hint: .7, .07
+        pos_hint: {"center_x": .5, "center_y": .52}
+        TextInput:
+            hint_text: "Password"
+            font_name: "fonts/SFProText-Regular.ttf"
+            size_hint_y: .75
+            pos_hint: {"center_x": .43, "center_y": .5}
+            background_color: 1, 1, 1, 0
+            foreground_color: rgba(0, 0, 59, 255)
+            cursor_color: rgba(0, 0, 59, 255)
+            font_size: "17sp"
+            cursor_width: "2sp"
+            multiline: False
+            password: True
+        MDFloatLayout:
+            pos_hint: {"center_x": .45, "center_y": .31}
+            size_hint_y: .03
+            md_bg_color:rgba(178, 178, 178, 255)
+
+
+    Button:
+        text: "Sign up"
+        size_hint_x: 0.57
+        size_hint_y: .054
+        pos_hint: {"center_x": .5, "center_y": .40}
+        background_color: 0, 0, 0, 0
+        color: rgba(114,122,67,255)
+        font_name: "fonts/SFProText-Bold.ttf"
+        font_size: "20sp"
+        halign: "center"
+        on_release:
+            root.manager.transition.direction = "left"
+            root   .manager.current = "login"
+        canvas.before:
+            Color:
+                rgb: rgba(114, 122, 67, 255)
+            Line:
+                width: 2.3
+                rounded_rectangle: self.x, self.y, self.width, self.height, 12,12,12,12,200
