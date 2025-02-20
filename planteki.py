@@ -7,6 +7,16 @@ from kivy.core.window import Window
 from kivy.graphics import Color, Rectangle
 from kivymd.uix.button import MDIconButton
 
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.button import Button
+from kivy.uix.image import Image
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.scrollview import ScrollView
+from kivy.uix.widget import Widget
+from kivy.uix.popup import Popup
+
+
+
 Window.size = (440, 856)
 
 
@@ -19,6 +29,10 @@ class Planteki(MDApp):
         screen_manager.add_widget(Builder.load_file("login.kv"))
         screen_manager.add_widget(Builder.load_file("signup.kv"))
         screen_manager.add_widget(Builder.load_file("dashboard.kv"))
+        screen_manager.add_widget(Builder.load_file("wiki.kv"))
+        screen_manager.add_widget(Builder.load_file("sensor.kv"))
+        screen_manager.add_widget(Builder.load_file("plantsmenu.kv"))
+        screen_manager.add_widget(Builder.load_file("plantmain.kv"))
         return screen_manager
 
 if __name__ == "__main__":
