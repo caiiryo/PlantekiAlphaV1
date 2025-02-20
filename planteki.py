@@ -6,6 +6,8 @@ from kivy.lang import Builder
 from kivy.core.window import Window
 from kivy.graphics import Color, Rectangle
 from kivymd.uix.button import MDIconButton
+from kivymd.uix.button import MDButtonText
+from kivymd.uix.button import MDFabButton
 
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
@@ -33,6 +35,9 @@ class Planteki(MDApp):
         screen_manager.add_widget(Builder.load_file("sensor.kv"))
         screen_manager.add_widget(Builder.load_file("plantsmenu.kv"))
         screen_manager.add_widget(Builder.load_file("plantmain.kv"))
+        screen_manager.add_widget(Builder.load_file("forgotpass.kv"))
+        screen_manager.add_widget(Builder.load_file("verification.kv"))
+        screen_manager.add_widget(Builder.load_file("setnewpass.kv"))
         return screen_manager
 
 if __name__ == "__main__":
