@@ -29,6 +29,7 @@ MDScreen:
         font_size: "23sp"
         pos_hint: {"center_x": .372,"center_y": .832}
         color: rgba(107, 107, 107, 255)
+
 #username
     MDFloatLayout:
         size_hint: .7, .07
@@ -37,7 +38,7 @@ MDScreen:
             hint_text: "Username"
             font_name: "fonts/SFProText-Regular.ttf"
             size_hint_y: .75
-            pos_hint: {"center_x": .43, "center_y": .5}
+            pos_hint: {"center_x": .50, "center_y": .5}
             background_color: 1, 1, 1, 0
             foreground_color: rgba(0, 0, 59, 255)
             cursor_color: rgba(0, 0, 59, 255)
@@ -45,9 +46,10 @@ MDScreen:
             cursor_width: "2sp"
             multiline: False
         MDFloatLayout:
-            pos_hint: {"center_x": .45, "center_y": .31}
+            pos_hint: {"center_x": .50, "center_y": .31}
             size_hint_y: .03
             md_bg_color:rgba(178, 178, 178, 255)
+
 #Emailaddress
     MDFloatLayout:
         size_hint: .7, .07
@@ -56,7 +58,7 @@ MDScreen:
             hint_text: "Email Address"
             font_name: "fonts/SFProText-Regular.ttf"
             size_hint_y: .75
-            pos_hint: {"center_x": .43, "center_y": .5}
+            pos_hint: {"center_x": .50, "center_y": .5}
             background_color: 1, 1, 1, 0
             foreground_color: rgba(0, 0, 59, 255)
             cursor_color: rgba(0, 0, 59, 255)
@@ -64,7 +66,7 @@ MDScreen:
             cursor_width: "2sp"
             multiline: False
         MDFloatLayout:
-            pos_hint: {"center_x": .45, "center_y": .31}
+            pos_hint: {"center_x": .50, "center_y": .31}
             size_hint_y: .03
             md_bg_color:rgba(178, 178, 178, 255)
 
@@ -75,7 +77,7 @@ MDScreen:
             hint_text: "Password"
             font_name: "fonts/SFProText-Regular.ttf"
             size_hint_y: .75
-            pos_hint: {"center_x": .43, "center_y": .5}
+            pos_hint: {"center_x": .50, "center_y": .5}
             background_color: 1, 1, 1, 0
             foreground_color: rgba(0, 0, 59, 255)
             cursor_color: rgba(0, 0, 59, 255)
@@ -84,7 +86,27 @@ MDScreen:
             multiline: False
             password: True
         MDFloatLayout:
-            pos_hint: {"center_x": .45, "center_y": .31}
+            pos_hint: {"center_x": .50, "center_y": .31}
+            size_hint_y: .03
+            md_bg_color:rgba(178, 178, 178, 255)
+
+    MDFloatLayout:
+        size_hint: .7, .07
+        pos_hint: {"center_x": .5, "center_y": .42}
+        TextInput:
+            hint_text: "Confirm Password"
+            font_name: "fonts/SFProText-Regular.ttf"
+            size_hint_y: .75
+            pos_hint: {"center_x": .50, "center_y": .5}
+            background_color: 1, 1, 1, 0
+            foreground_color: rgba(0, 0, 59, 255)
+            cursor_color: rgba(0, 0, 59, 255)
+            font_size: "17sp"
+            cursor_width: "2sp"
+            multiline: False
+            password: True
+        MDFloatLayout:
+            pos_hint: {"center_x": .50, "center_y": .31}
             size_hint_y: .03
             md_bg_color:rgba(178, 178, 178, 255)
 
@@ -93,7 +115,7 @@ MDScreen:
         text: "Sign up"
         size_hint_x: 0.57
         size_hint_y: .054
-        pos_hint: {"center_x": .5, "center_y": .40}
+        pos_hint: {"center_x": .5, "center_y": .35}
         background_color: 0, 0, 0, 0
         color: rgba(114,122,67,255)
         font_name: "fonts/SFProText-Bold.ttf"
