@@ -32,12 +32,12 @@ MDScreen:
 
     MDFloatLayout:
         size_hint: .7, .07
-        pos_hint: {"center_x": .5, "center_y": .72}
+        pos_hint: {"center_x": .5, "center_y": .62}
         TextInput:
             hint_text: "Username"
             font_name: "fonts/SFProText-Regular.ttf"
             size_hint_y: .75
-            pos_hint: {"center_x": .43, "center_y": .5}
+            pos_hint: {"center_x": .50, "center_y": .5}
             background_color: 1, 1, 1, 0
             foreground_color: rgba(0, 0, 59, 255)
             cursor_color: rgba(0, 0, 59, 255)
@@ -45,18 +45,18 @@ MDScreen:
             cursor_width: "2sp"
             multiline: False
         MDFloatLayout:
-            pos_hint: {"center_x": .45, "center_y": .31}
+            pos_hint: {"center_x": .50, "center_y": .31}
             size_hint_y: .03
             md_bg_color:rgba(178, 178, 178, 255)
 
     MDFloatLayout:
         size_hint: .7, .07
-        pos_hint: {"center_x": .5, "center_y": .62}
+        pos_hint: {"center_x": .5, "center_y": .52}
         TextInput:
             hint_text: "Password"
             font_name: "fonts/SFProText-Regular.ttf"
             size_hint_y: .75
-            pos_hint: {"center_x": .43, "center_y": .5}
+            pos_hint: {"center_x": .50, "center_y": .5}
             background_color: 1, 1, 1, 0
             foreground_color: rgba(0, 0, 59, 255)
             cursor_color: rgba(0, 0, 59, 255)
@@ -65,7 +65,7 @@ MDScreen:
             multiline: False
             password: True
         MDFloatLayout:
-            pos_hint: {"center_x": .45, "center_y": .31}
+            pos_hint: {"center_x": .50, "center_y": .31}
             size_hint_y: .03
             md_bg_color:rgba(178, 178, 178, 255)
 
@@ -73,7 +73,7 @@ MDScreen:
         text: "Login"
         size_hint_x: 0.57
         size_hint_y: .054
-        pos_hint: {"center_x": .5, "center_y": .47}
+        pos_hint: {"center_x": .5, "center_y": .35}
         background_color: 0, 0, 0, 0
         color: rgba(114,122,67,255)
         font_name: "fonts/SFProText-Bold.ttf"
@@ -88,3 +88,37 @@ MDScreen:
             Line:
                 width: 2.3
                 rounded_rectangle: self.x, self.y, self.width, self.height, 12,12,12,12,200
+
+    MDButton:
+        text: "Forgot Password"
+        pos_hint: {"center_x": .5, "center_y": .28}
+        font_name: "BPoppins"  # Remove this if you suspect a font issue
+        font_size: "30sp"
+        style: "text"
+        size_hint: None, None  # Ensure the button has a defined size
+        width: dp(200)  # Set a fixed width to test visibility
+        height: dp(50)
+        theme_text_color: "Custom"
+        text_color: 1, 0, 0, 1  # Use red temporarily to see if it appears
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "signup"
+
+
+
+    MDLabel:
+        text: "or"
+        color: rgba(107, 107, 107, 255)
+        pos_hint: {"center_y": .22}
+        font_size: "13sp"
+        font_name: "BPoppins"
+        halign: "center"
+    MDFloatLayout:
+        md_bd_color: rgba(107, 107, 107, 255)
+        size_hint: .3, .002
+        pos_hint: {"center_x": .3, "center_y": .22}
+    MDFloatLayout:
+        md_bd_color: rgba(178, 178, 178, 255)
+        size_hint: .3, .002
+        pos_hint: {"center_x": .7, "center_y": .22}
+
